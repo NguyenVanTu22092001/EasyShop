@@ -114,6 +114,7 @@ Route::get('/all/review', [ReviewController::class, 'GetAllReview'])->name('all.
 /// Site Info Route
 Route::get('/getsite/info', [SiteInfoController::class, 'GetSiteInfo'])->name('getsite.info');
 Route::post('/update/siteinfo', [SiteInfoController::class, 'UpdateSiteInfo'])->name('update.siteinfo');
+
 Route::prefix('order')->group(function () {
     Route::get('/pending', [ProductCartController::class, 'PendingOrder'])->name('pending.order');
     Route::get('/processing', [ProductCartController::class, 'ProcessingOrder'])->name('processing.order');
